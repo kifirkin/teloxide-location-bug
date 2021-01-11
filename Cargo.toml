@@ -1,0 +1,22 @@
+[package]
+name = "dialogue_bot"
+version = "0.1.0"
+authors = ["Temirkhan Myrzamadi <hirrolot@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4.8"
+pretty_env_logger = "0.4.0"
+
+futures = "0.3.5"
+tokio = { version = "0.2.11", features = ["rt-threaded", "macros"] }
+
+teloxide = { version = "0.3" }
+teloxide-macros = "0.3"
+
+derive_more = "0.99.9"
+
+[profile.release]
+lto = true
